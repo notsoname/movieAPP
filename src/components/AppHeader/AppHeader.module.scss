@@ -1,0 +1,57 @@
+@mixin breakpoint ($breakpoint) {
+    @media (max-width: $breakpoint) {
+        @content;
+    }
+}
+
+
+.active {
+    background-color: black;
+}
+
+.header {
+    height: 10vh;
+    width: 100%;
+    background-color: #282828;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.btn {
+    width: 300px;
+    height: 60px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: bold;
+    margin-right: 5px;
+    transition: .3s all;
+
+    @include breakpoint(1400px) {
+        
+    }
+    @include breakpoint(1200px) {
+       
+    }
+    @include breakpoint(992px ) {
+        width: 200px;
+        height: 50px;
+    }
+    @include breakpoint(768px ) {
+        width: 200px;
+        height: 35px;
+    }
+    @include breakpoint(576px) {
+        width: 150px;
+        height: 35px;
+    }
+}
+
+

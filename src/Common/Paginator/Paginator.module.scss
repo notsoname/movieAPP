@@ -1,0 +1,29 @@
+.pagination{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 25px;
+}
+.pagination__button{
+    padding: 5px 25px;
+    background-color: white;
+    border-color: #007bff;
+    border-radius: 10px;
+    font-size: 25px;    
+    color: black;
+    transition: .4s;
+    margin-right: 5px;
+    border: none;
+}
+.pagination__button.current{
+    font-weight: bold;
+}
+.pagination__button:last-child{
+    margin-right: 0;
+}
+
+.pagination__button:hover{
+    background-color: #299DED;
+    color: #303539;
+}

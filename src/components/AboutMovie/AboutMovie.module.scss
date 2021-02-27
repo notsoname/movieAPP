@@ -1,0 +1,134 @@
+@mixin breakpoint ($breakpoint) {
+    @media (max-width: $breakpoint) {
+        @content;
+    }
+}
+
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 100px;
+    transition: .3s all;
+    align-items: flex-start ;
+}
+
+.poster {
+    width: 30%;
+    padding-right: 10px;
+    &__img {
+        border-radius: 10px;
+        width: 100%;
+    }
+    @include breakpoint(1439px){
+    }
+    @include breakpoint(1200px) {
+        width: 40%;
+    }
+    @include breakpoint(992px) {
+        width: 60%;
+    }
+    @include breakpoint(768px) {
+        width: unset;
+    }
+    @include breakpoint(576px) {
+        width: 100%;
+        padding: 0 10px;
+    }
+}
+
+.aboutMovie {
+    width: 70%;
+    @include breakpoint(1439px){
+    }
+    @include breakpoint(1200px) {
+        width: 60%;
+    }
+    @include breakpoint(992px) {
+        width: 40%;
+    }
+    @include breakpoint(768px) {
+        width: unset;
+    }
+    @include breakpoint(576px) {
+        width: 100%;
+        padding: 0 10px;
+    }
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: .3s all;
+}
+
+.title {
+    font-weight: bold;
+    &__original {
+        opacity: .5;
+    }
+    @include breakpoint(992px) {
+        font-size: 36px;
+        text-align: center;
+    }
+    @include breakpoint(768px) {
+        font-size: 26px;
+    }
+    @include breakpoint(576px) {
+        font-size: 20px;
+    }
+}
+
+.rate {
+    font-size: 15px;
+    @include breakpoint(992px) {
+        font-size: 18px;
+    }
+    @include breakpoint(768px) {
+        font-size: 16px;
+    }
+    @include breakpoint(576px) {
+        font-size: 20px;
+    }
+}
+
+.date {
+    display: flex;
+    justify-content: center;
+    color: white;
+    @include breakpoint(992px) {
+        font-size: 20px;
+    }
+    @include breakpoint(768px) {
+        font-size: 18px;
+    }
+    @include breakpoint(768px) {
+        font-size: 16px;
+        text-align: center;
+    }
+    @include breakpoint(576px) {
+        font-size: 14px;
+    }
+}
+
+.descr {
+    margin-top: 0.5em;
+    font-weight: 500;
+    color: white;
+    width: 100%;
+    @include breakpoint(992px) {
+        font-size: 18px;
+    }
+    @include breakpoint(768px) {
+        font-size: 16px;
+        text-align: center;
+    }
+    @include breakpoint(576px) {
+        font-size: 14px;
+    }
+}
+

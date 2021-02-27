@@ -1,0 +1,45 @@
+.Search {
+    margin-right: 10px;
+}
+
+.poster {
+    width: 300px;
+    border-radius: 10px;
+    min-height: 225px;
+}
+
+.posterWrap {
+    width: 320px;
+    min-height: 240px;
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+.searchMovie {
+    margin-top: 1em;
+}
+
+
+
+.movie {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.title {
+    color: white;
+}
+
+.rate {
+    text-decoration: none;
+    color: white;
+}
+
+.link {
+    transition: .3s all;
+    &:hover {
+        transform: scale(1.05);
+        transition: .3s all;
+    }
+}
